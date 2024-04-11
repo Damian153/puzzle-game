@@ -1,10 +1,8 @@
-res://Scene/gem_collectable.tscn
-res://inv/playerinv.tres
-res://inv/Items/red_key.tres
 res://Scene/level1.tscn
+res://inv/playerinv.tres
 res://Scene/player.tscn
 res://Scene/chest.tscn
 res://inv/inv_ui.tscn
 res://inv/inv_ui_slot.tscn
 res://Scene/Coin.tscn
-res://Scene/Coin.gd
+res://Scene/gem_collectable.tscn
