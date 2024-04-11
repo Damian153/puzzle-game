@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://0y2ssbylcvjb"]
+
+[ext_resource type="Script" path="res://gem_collectable.gd" id="1_aegtf"]
+[ext_resource type="Texture2D" uid="uid://dasj2eqmheq0h" path="res://Sprites/Gem.png" id="2_b7jhn"]
+[ext_resource type="Resource" uid="uid://bne70vae73ntn" path="res://inv/Items/gem.tres" id="2_uyekc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s1j0e"]
+radius = 11.0
+
+[node name="gem_collectable" type="StaticBody2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_aegtf")
+item = ExtResource("2_uyekc")
+
+[node name="gem" type="Sprite2D" parent="."]
+texture = ExtResource("2_b7jhn")
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+shape = SubResource("CircleShape2D_s1j0e")
+
+[connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]

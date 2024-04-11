@@ -13,3 +13,11 @@ func _physics_process(delta):
 		velocity.x = 0
 		velocity.y = 0
 	move_and_slide()
+
+func player():
+	pass
+
+func collect(item):
+	inv.insert(item)
+	
+

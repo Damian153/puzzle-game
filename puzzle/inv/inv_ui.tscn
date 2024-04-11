@@ -55,11 +55,3 @@ layout_mode = 2
 
 [node name="Inv_UI_slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("3_80pd0")]
 layout_mode = 2
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = -19.0
-offset_top = -30.0
-offset_right = 88.0
-theme_override_font_sizes/font_size = 21
-text = "BACKPACK"
