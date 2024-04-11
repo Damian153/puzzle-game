@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmkcg6rf683mj"]
+
+[ext_resource type="Texture2D" uid="uid://b46u5c2qf2o1y" path="res://Sprites/verde2.png" id="1_onxdf"]
+[ext_resource type="PackedScene" uid="uid://d25kdg30j3grm" path="res://Scene/player.tscn" id="1_rgky6"]
+[ext_resource type="PackedScene" uid="uid://dn6y50gs5stob" path="res://Scene/chest.tscn" id="3_jqlah"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Verde2" type="Sprite2D" parent="."]
+scale = Vector2(3.515, 3.515)
+texture = ExtResource("1_onxdf")
+
+[node name="Area2D" parent="." instance=ExtResource("3_jqlah")]
+position = Vector2(286, 332)
+
+[node name="player" parent="." instance=ExtResource("1_rgky6")]
+y_sort_enabled = true
+position = Vector2(415, 320)
