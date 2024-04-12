@@ -23,7 +23,7 @@ texture = ExtResource("1_onxdf")
 position = Vector2(286, 332)
 
 [node name="player" parent="." instance=ExtResource("1_rgky6")]
-y_sort_enabled = true
+z_index = 1
 position = Vector2(415, 320)
 
 [node name="Node2D" parent="." instance=ExtResource("4_5htjf")]

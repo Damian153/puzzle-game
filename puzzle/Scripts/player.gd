@@ -19,5 +19,4 @@ func player():
 
 func collect(item):
 	inv.insert(item)
-	
 
