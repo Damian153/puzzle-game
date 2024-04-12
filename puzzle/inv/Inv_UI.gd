@@ -13,7 +13,7 @@ func _ready():
 func update_slots():
 	for i in range(min(inv.slots.size(), slots.size())):
 		slots[i].update(inv.slots[i])
-
+		
 func _process(delta):
 	if Input.is_action_just_pressed("inv"):
 		if is_open: 

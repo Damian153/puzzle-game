@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://0y2ssbylcvjb"]
 
-[ext_resource type="Script" path="res://gem_collectable.gd" id="1_aegtf"]
+[ext_resource type="Script" path="res://Scripts/gem_collectable.gd" id="1_ygvva"]
 [ext_resource type="Texture2D" uid="uid://dasj2eqmheq0h" path="res://Sprites/Gem.png" id="2_b7jhn"]
 [ext_resource type="Resource" uid="uid://bne70vae73ntn" path="res://inv/Items/gem.tres" id="2_uyekc"]
 
@@ -9,7 +9,7 @@ radius = 16.9761
 
 [node name="gem_collectable" type="StaticBody2D"]
 scale = Vector2(1.885, 1.885)
-script = ExtResource("1_aegtf")
+script = ExtResource("1_ygvva")
 item = ExtResource("2_uyekc")
 
 [node name="gem" type="Sprite2D" parent="."]
