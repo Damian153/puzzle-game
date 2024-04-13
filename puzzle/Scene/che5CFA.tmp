@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://3ioeiacajlks"]
+
+[ext_resource type="Script" path="res://Scene/chest.gd" id="1_wyc3w"]
+[ext_resource type="Texture2D" uid="uid://bhf4a6s5oqy24" path="res://Sprites/chestc.png" id="2_nk67b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okj4f"]
+size = Vector2(60, 63)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m4rh2"]
+radius = 123.077
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(0.65, 0.65)
+script = ExtResource("1_wyc3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_okj4f")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Chestc" type="Sprite2D" parent="Area2D"]
+texture_filter = 3
+scale = Vector2(2, 2)
+texture = ExtResource("2_nk67b")
+
+[node name="ineraction" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_m4rh2")
+
+[node name="locked" type="Label" parent="."]
+offset_left = -66.1538
+offset_top = -89.2308
+offset_right = 2682.85
+offset_bottom = 872.769
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0.854902, 0, 0, 1)
+theme_override_font_sizes/font_size = 706
+text = "LOCKED"
+
+[node name="unlocked" type="Label" parent="."]
+offset_left = -92.3077
+offset_top = -89.2308
+offset_right = 3928.69
+offset_bottom = 872.769
+scale = Vector2(0.05, 0.05)
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 706
+text = "UNLOCKED!"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
