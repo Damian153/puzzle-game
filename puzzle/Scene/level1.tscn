@@ -22,37 +22,49 @@ texture = ExtResource("1_onxdf")
 
 [node name="player" parent="." instance=ExtResource("1_rgky6")]
 z_index = 1
-position = Vector2(18, -18)
+position = Vector2(-93, -17)
 
 [node name="Node2D" parent="." instance=ExtResource("4_5htjf")]
-position = Vector2(183, -47)
+position = Vector2(192, -120)
 
 [node name="coin" parent="." instance=ExtResource("4_5htjf")]
-position = Vector2(184, -141)
+position = Vector2(95, -119)
 
 [node name="coin2" parent="." instance=ExtResource("4_5htjf")]
-position = Vector2(53, -109)
+position = Vector2(4, -124)
 
 [node name="coin3" parent="." instance=ExtResource("4_5htjf")]
-position = Vector2(201, 46)
+position = Vector2(303, -124)
 
 [node name="coin4" parent="." instance=ExtResource("4_5htjf")]
 position = Vector2(-95, -126)
 
 [node name="coin5" parent="." instance=ExtResource("4_5htjf")]
-position = Vector2(35, 128)
+position = Vector2(409, -124)
 
 [node name="gem_collectable" parent="." instance=ExtResource("5_bdjtm")]
-position = Vector2(-189, -135)
+position = Vector2(17, 122)
+
+[node name="gem_collectable5" parent="." instance=ExtResource("5_bdjtm")]
+position = Vector2(-65, 132)
+
+[node name="gem_collectable6" parent="." instance=ExtResource("5_bdjtm")]
+position = Vector2(-144, 123)
 
 [node name="gem_collectable2" parent="." instance=ExtResource("5_bdjtm")]
-position = Vector2(124, -219)
+position = Vector2(302, 114)
 
 [node name="gem_collectable3" parent="." instance=ExtResource("5_bdjtm")]
-position = Vector2(-7, -206)
+position = Vector2(213, 109)
 
 [node name="gem_collectable4" parent="." instance=ExtResource("5_bdjtm")]
-position = Vector2(-99, -209)
+position = Vector2(116, 119)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_jqlah")]
-position = Vector2(-83, -13)
+position = Vector2(417, 3)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("3_jqlah")]
+position = Vector2(242, 5)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("3_jqlah")]
+position = Vector2(48, -1)
