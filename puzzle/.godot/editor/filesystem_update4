@@ -6,4 +6,6 @@ res://inv/inv_ui_slot.tscn
 res://Scene/Coin.tscn
 res://Scene/gem_collectable.tscn
 res://Scene/chest.tscn
+res://Scene/chest.gd
 res://inv/inv_ui_slot.gd
+res://inv/Inv_UI.gd

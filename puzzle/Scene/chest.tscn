@@ -47,5 +47,14 @@ theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_font_sizes/font_size = 706
 text = "UNLOCKED!"
 
+[node name="impossible" type="Label" parent="."]
+offset_left = -276.923
+offset_top = -106.154
+offset_right = 11893.1
+offset_bottom = 774.846
+scale = Vector2(0.05, 0.05)
+theme_override_font_sizes/font_size = 646
+text = "You don't have a key to open this chest!"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
