@@ -1,6 +1,6 @@
 extends Control
 
-@onready var inv: Inv = preload("res://inv/playerinv.tres")
+@onready var inv: Inv = preload("res://inv/chestinv.tres")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
 
 var is_open = false 
@@ -15,7 +15,7 @@ func update_slots():
 
 func _process(delta):
 	update_slots()
-	if Input.is_action_just_pressed("inv"):
+	if Global.show_inv:
 		if is_open: 
 			close()
 		else:
@@ -24,8 +24,10 @@ func _process(delta):
 func open():
 	visible = true
 	is_open = true
+	Global.open = true
 
 
 func close():
 	visible = false
 	is_open = false
+	Global.open = false

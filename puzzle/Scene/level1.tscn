@@ -20,9 +20,18 @@ position = Vector2(-7.62939e-06, 0.500019)
 scale = Vector2(2.22566, 1.83152)
 texture = ExtResource("1_onxdf")
 
+[node name="StaticBody2D" parent="." instance=ExtResource("3_jqlah")]
+position = Vector2(726, 6)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("3_jqlah")]
+position = Vector2(329, 10)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("3_jqlah")]
+position = Vector2(-235, -5)
+
 [node name="player" parent="." instance=ExtResource("1_rgky6")]
 z_index = 1
-position = Vector2(-93, -17)
+position = Vector2(1, -17)
 
 [node name="Node2D" parent="." instance=ExtResource("4_5htjf")]
 position = Vector2(192, -120)
@@ -59,12 +68,3 @@ position = Vector2(213, 109)
 
 [node name="gem_collectable4" parent="." instance=ExtResource("5_bdjtm")]
 position = Vector2(116, 119)
-
-[node name="StaticBody2D" parent="." instance=ExtResource("3_jqlah")]
-position = Vector2(417, 3)
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("3_jqlah")]
-position = Vector2(242, 5)
-
-[node name="StaticBody2D3" parent="." instance=ExtResource("3_jqlah")]
-position = Vector2(48, -1)

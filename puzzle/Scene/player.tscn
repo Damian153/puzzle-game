@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d25kdg30j3grm"]
+[gd_scene load_steps=7 format=3 uid="uid://d25kdg30j3grm"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_11rt2"]
 [ext_resource type="Texture2D" uid="uid://c2y8rcwv72acc" path="res://Sprites/enemy1.png" id="1_k1rnw"]
 [ext_resource type="Resource" uid="uid://2vhvmw2jqlmk" path="res://inv/playerinv.tres" id="2_klqxj"]
 [ext_resource type="PackedScene" uid="uid://4l7eyvtgf47d" path="res://inv/inv_ui.tscn" id="4_d8i4a"]
+[ext_resource type="PackedScene" uid="uid://hvwofgrytcxj" path="res://inv/chest_inv_ui.tscn" id="5_ldgh6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rvhlo"]
 radius = 19.0263
@@ -12,14 +13,13 @@ radius = 19.0263
 script = ExtResource("1_11rt2")
 inv = ExtResource("2_klqxj")
 
-[node name="Inv_UI" parent="." instance=ExtResource("4_d8i4a")]
-offset_left = -364.0
-offset_top = -45.0
-offset_right = -303.0
-offset_bottom = 2.0
-
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
 remote_path = NodePath("../Camera2D")
+
+[node name="Enemy1" type="Sprite2D" parent="."]
+texture_filter = 3
+scale = Vector2(1.51, 1.51)
+texture = ExtResource("1_k1rnw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -1000
@@ -29,10 +29,33 @@ limit_bottom = 500
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
 
-[node name="Enemy1" type="Sprite2D" parent="."]
-texture_filter = 3
-scale = Vector2(1.51, 1.51)
-texture = ExtResource("1_k1rnw")
+[node name="chestInv_UI" parent="Camera2D" instance=ExtResource("5_ldgh6")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 77.0
+offset_top = -113.0
+offset_right = 138.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="Inv_UI" parent="Camera2D" instance=ExtResource("4_d8i4a")]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -403.0
+offset_top = -87.0
+offset_right = -342.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.47, 2.98)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 15)

@@ -2,12 +2,15 @@ extends StaticBody2D
 
 @onready var locked = $locked
 @onready var unlocked = $unlocked
-@onready var inv : Inv = preload("res://inv/playerinv.tres")
+@onready var invpl : Inv = preload("res://inv/playerinv.tres")
 @onready var impossible = $impossible
-@onready var slot : InvSlot 
+@onready var slot : InvSlot
+
+@export var inv : Inv
+signal sts
 var status = "locked" #unlocked
-var player_in_area = false
 var can_unlock = false
+var player_in_area = false
 var poz=0
 
 func _ready():
@@ -28,8 +31,13 @@ func _process(delta):
 					impossible.visible = false
 		else: 
 			locked.visible= false
+			if Input.is_action_just_pressed("action"):
+				Global.show_inv = true
 	else:
 		locked.visible = false
+		Global.show_inv = false
+	if status == "unlocked":
+		emit_signal("sts")
 
 func _on_area_2d_body_entered(body):
 	if body.has_method("player"):
@@ -42,16 +50,16 @@ func _on_area_2d_body_exited(body):
 
 func unlock():
 	if Input.is_action_pressed("action") :
-		if inv.slots[poz].amount >= 1:
+		if invpl.slots[poz].amount >= 1:
 			status = "unlocked"
 			unlocked.visible = true
-			inv.slots[poz].amount -= 1
+			invpl.slots[poz].amount -= 1
 			await get_tree().create_timer(1).timeout
 			unlocked.visible = false
 
 func search():
 	for i in 6:
-		if inv.slots[i].item:
-			if str(inv.slots[i].item.name) == Global.coin:
+		if invpl.slots[i].item:
+			if str(invpl.slots[i].item.name) == Global.coin:
 				can_unlock = true
 				poz=i
