@@ -17,10 +17,8 @@ func _physics_process(delta):
 func _process(delta):
 	if Global.open:
 		speed = 0
-		#visible = false
 	else :
 		speed = 300
-		#visible = true
 
 func player():
 	pass

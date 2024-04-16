@@ -1,8 +1,10 @@
 extends Control
 
 @onready var inv: Inv = preload("res://inv/chestinv.tres")
+@onready var plinv : Inv = preload("res://inv/playerinv.tres")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
-
+@onready var item : InvItem
+var MouseOver = false
 var is_open = false 
 
 func _ready():
@@ -31,3 +33,5 @@ func close():
 	visible = false
 	is_open = false
 	Global.open = false
+
+

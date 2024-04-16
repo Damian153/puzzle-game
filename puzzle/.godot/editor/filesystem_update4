@@ -1,4 +1,6 @@
 res://Scene/level1.tscn
+res://inv/chestinv.tres
+res://inv/Inv_UI.gd
 res://inv/playerinv.tres
 res://Scene/player.tscn
 res://inv/inv_ui.tscn
@@ -6,13 +8,7 @@ res://inv/inv_ui_slot.tscn
 res://Scene/Coin.tscn
 res://Scene/gem_collectable.tscn
 res://Scene/chest.tscn
-res://inv/Inv_UI.gd
-res://inv/chestinv_ui.tscn
-res://inv/inv_ui_slot.gd
-res://Scene/chest.gd
-res://inv/chestinv.tres
 res://inv/chest_inv_ui.tscn
-res://inv/chest_inv_ui.gd
-res://Scripts/global.gd
+res://inv/inv_ui_slot.gd
 res://Scripts/player.gd
-res://Scene/open.gd
+res://inv/chest_inv_ui.gd

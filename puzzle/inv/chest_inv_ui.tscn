@@ -73,3 +73,8 @@ layout_mode = 2
 
 [node name="Inv_UI_slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("3_5ymy4")]
 layout_mode = 2
+
+[connection signal="mouse_entered" from="NinePatchRect" to="." method="_on_nine_patch_rect_mouse_entered"]
+[connection signal="mouse_entered" from="NinePatchRect" to="NinePatchRect/GridContainer/Inv_UI_slot" method="_on_nine_patch_rect_mouse_entered"]
+[connection signal="mouse_entered" from="NinePatchRect/GridContainer/Inv_UI_slot" to="NinePatchRect/GridContainer/Inv_UI_slot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="NinePatchRect/GridContainer/Inv_UI_slot" to="NinePatchRect/GridContainer/Inv_UI_slot" method="_on_mouse_exited"]
