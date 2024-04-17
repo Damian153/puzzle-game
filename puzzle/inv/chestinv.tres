@@ -23,9 +23,10 @@ amount = 0
 script = ExtResource("2_7y2l7")
 amount = 0
 
-[sub_resource type="Resource" id="Resource_q6knn"]
+[sub_resource type="Resource" id="Resource_58h4j"]
 script = ExtResource("2_7y2l7")
-amount = 0
+item = ExtResource("3_u4uge")
+amount = 3
 
 [sub_resource type="Resource" id="Resource_5qwes"]
 script = ExtResource("2_7y2l7")
@@ -57,4 +58,4 @@ amount = 0
 
 [resource]
 script = ExtResource("1_8x5ey")
-slots = Array[ExtResource("2_7y2l7")]([SubResource("Resource_rt38c"), SubResource("Resource_8pxx3"), SubResource("Resource_c0pax"), SubResource("Resource_fqf3f"), SubResource("Resource_q6knn"), SubResource("Resource_5qwes"), SubResource("Resource_8twpt"), SubResource("Resource_2rf10"), SubResource("Resource_01xcf"), SubResource("Resource_qcq2c"), SubResource("Resource_it8hp"), SubResource("Resource_uyyur")])
+slots = Array[ExtResource("2_7y2l7")]([SubResource("Resource_rt38c"), SubResource("Resource_8pxx3"), SubResource("Resource_c0pax"), SubResource("Resource_fqf3f"), SubResource("Resource_58h4j"), SubResource("Resource_5qwes"), SubResource("Resource_8twpt"), SubResource("Resource_2rf10"), SubResource("Resource_01xcf"), SubResource("Resource_qcq2c"), SubResource("Resource_it8hp"), SubResource("Resource_uyyur")])

@@ -4,7 +4,6 @@ extends Control
 @onready var plinv : Inv = preload("res://inv/playerinv.tres")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
 @onready var item : InvItem
-var MouseOver = false
 var is_open = false 
 
 func _ready():

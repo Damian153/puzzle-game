@@ -15,10 +15,12 @@ func update_slots():
 
 func _process(delta):
 	update_slots()
-	if Input.is_action_just_pressed("inv"):
+	if Input.is_action_just_pressed("inv") or Global.show_inv:
 		if is_open: 
 			close()
 		else:
+			open()
+		if Global.show_inv:
 			open()
 
 func open():
