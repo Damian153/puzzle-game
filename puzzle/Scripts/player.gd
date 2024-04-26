@@ -14,12 +14,6 @@ func _physics_process(delta):
 		velocity.y = 0
 	move_and_slide()
 
-func _process(delta):
-	if Global.open:
-		speed = 0
-	else :
-		speed = 300
-
 func player():
 	pass
 

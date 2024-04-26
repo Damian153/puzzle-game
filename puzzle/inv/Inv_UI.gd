@@ -7,7 +7,7 @@ var is_open = false
 
 func _ready():
 	inv.update.connect(update_slots)
-	close()
+	self.visible =true
 
 func update_slots():
 	for i in range(min(inv.slots.size(), slots.size())):
@@ -15,19 +15,3 @@ func update_slots():
 
 func _process(delta):
 	update_slots()
-	if Input.is_action_just_pressed("inv") or Global.show_inv:
-		if is_open: 
-			close()
-		else:
-			open()
-		if Global.show_inv:
-			open()
-
-func open():
-	visible = true
-	is_open = true
-
-
-func close():
-	visible = false
-	is_open = false

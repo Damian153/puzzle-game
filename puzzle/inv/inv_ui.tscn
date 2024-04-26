@@ -5,23 +5,26 @@
 [ext_resource type="PackedScene" uid="uid://qjsxoxytep0c" path="res://inv/inv_ui_slot.tscn" id="3_80pd0"]
 
 [node name="Inv_UI" type="Control"]
-custom_minimum_size = Vector2(61, 46)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 61.0
-offset_bottom = 46.0
 scale = Vector2(3, 2)
 script = ExtResource("1_wey7o")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_right = 72.0
-offset_bottom = 57.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.5
+offset_right = 65.5
+offset_bottom = 20.0
+grow_horizontal = 2
 texture = ExtResource("2_jk5tl")
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
 patch_margin_bottom = 6
+metadata/_edit_use_anchors_ = true
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
 layout_mode = 1
@@ -30,13 +33,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.0
-offset_top = -20.0
-offset_right = 28.0
-offset_bottom = 20.0
+offset_left = -58.0
+offset_top = -8.0
+offset_right = 58.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 3
+columns = 6
 
 [node name="Inv_UI_slot" parent="NinePatchRect/GridContainer" instance=ExtResource("3_80pd0")]
 layout_mode = 2

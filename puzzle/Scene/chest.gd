@@ -2,16 +2,17 @@ extends StaticBody2D
 
 @onready var locked = $locked
 @onready var unlocked = $unlocked
-@onready var invpl : Inv = preload("res://inv/playerinv.tres")
+@onready var inv : Inv = preload("res://inv/playerinv.tres")
 @onready var impossible = $impossible
 @onready var slot : InvSlot
+var gem_collectable = preload("res://Scene/gem_collectable.tscn")
 
-@export var inv : Inv
-signal sts
 var status = "locked" #unlocked
 var can_unlock = false
 var player_in_area = false
 var poz=0
+var collected = false
+var player = null
 
 func _ready():
 	locked.visible = false
@@ -31,16 +32,13 @@ func _process(delta):
 					impossible.visible = false
 		else: 
 			locked.visible= false
-			if Input.is_action_just_pressed("action"):
-				Global.show_inv = true
 	else:
 		locked.visible = false
-		Global.show_inv = false
-	if status == "unlocked":
-		emit_signal("sts")
+
 
 func _on_area_2d_body_entered(body):
 	if body.has_method("player"):
+		player = body
 		player_in_area = true
 		search()
 
@@ -50,16 +48,18 @@ func _on_area_2d_body_exited(body):
 
 func unlock():
 	if Input.is_action_pressed("action") :
-		if invpl.slots[poz].amount >= 1:
+		if inv.slots[poz].amount >= 1:
 			status = "unlocked"
 			unlocked.visible = true
-			invpl.slots[poz].amount -= 1
-			await get_tree().create_timer(1).timeout
+			inv.slots[poz].amount -= 1
+			await get_tree().create_timer(0.5).timeout
 			unlocked.visible = false
+			var instance = gem_collectable.instantiate()
+			add_child(instance)
 
 func search():
 	for i in 6:
-		if invpl.slots[i].item:
-			if str(invpl.slots[i].item.name) == Global.coin:
+		if inv.slots[i].item:
+			if str(inv.slots[i].item.name) == "coin":
 				can_unlock = true
 				poz=i

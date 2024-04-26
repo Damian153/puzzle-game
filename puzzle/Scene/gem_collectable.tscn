@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://bne70vae73ntn" path="res://inv/Items/gem.tres" id="2_uyekc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s1j0e"]
-radius = 16.9761
+radius = 34.4991
 
 [node name="gem_collectable" type="StaticBody2D"]
 scale = Vector2(1.885, 1.885)
@@ -13,6 +13,7 @@ script = ExtResource("1_ygvva")
 item = ExtResource("2_uyekc")
 
 [node name="gem" type="Sprite2D" parent="."]
+scale = Vector2(1.75, 1.75)
 texture = ExtResource("2_b7jhn")
 
 [node name="interactable_area" type="Area2D" parent="."]
@@ -21,12 +22,12 @@ texture = ExtResource("2_b7jhn")
 shape = SubResource("CircleShape2D_s1j0e")
 
 [node name="collect_text" type="Label" parent="."]
-offset_left = -36.6048
-offset_top = -23.8727
-offset_right = 1581.4
-offset_bottom = 230.127
+offset_left = -66.8435
+offset_top = -43.5013
+offset_right = 2639.16
+offset_bottom = 381.499
 scale = Vector2(0.05, 0.05)
-theme_override_font_sizes/font_size = 186
+theme_override_font_sizes/font_size = 311
 text = "Press (E) to collect"
 
 [connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]

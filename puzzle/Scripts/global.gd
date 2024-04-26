@@ -6,6 +6,9 @@ var coin :String
 var remove = false
 var open = false
 var show_inv = false
+
+var slots : Array
+
 func _process(delta):
 	if Input.is_action_just_pressed("esc"):
 		get_tree().quit()

@@ -1,26 +1,138 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmkcg6rf683mj"]
+[gd_scene load_steps=13 format=3 uid="uid://cmkcg6rf683mj"]
 
 [ext_resource type="Texture2D" uid="uid://b46u5c2qf2o1y" path="res://Sprites/verde2.png" id="1_onxdf"]
 [ext_resource type="PackedScene" uid="uid://d25kdg30j3grm" path="res://Scene/player.tscn" id="1_rgky6"]
+[ext_resource type="Texture2D" uid="uid://cjawoatwuok74" path="res://Sprites/grass.png" id="2_fu0a7"]
+[ext_resource type="Texture2D" uid="uid://dje823kcnshhf" path="res://Sprites/barrel.png" id="3_dqe1s"]
 [ext_resource type="PackedScene" uid="uid://3ioeiacajlks" path="res://Scene/chest.tscn" id="3_jqlah"]
 [ext_resource type="PackedScene" uid="uid://cfuug6qn1lpol" path="res://Scene/Coin.tscn" id="4_5htjf"]
-[ext_resource type="PackedScene" uid="uid://0y2ssbylcvjb" path="res://Scene/gem_collectable.tscn" id="5_bdjtm"]
-[ext_resource type="PackedScene" uid="uid://hvwofgrytcxj" path="res://inv/chest_inv_ui.tscn" id="6_3c4el"]
+[ext_resource type="Texture2D" uid="uid://dm6aerd54iiwo" path="res://Sprites/water.png" id="4_kyao7"]
 [ext_resource type="PackedScene" uid="uid://4l7eyvtgf47d" path="res://inv/inv_ui.tscn" id="7_uact4"]
 
-[sub_resource type="GDScript" id="GDScript_41mwx"]
-script/source = "extends Node2D
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ihcr5"]
+texture = ExtResource("2_fu0a7")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+0:4/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mayid"]
+texture = ExtResource("3_dqe1s")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
 
-"
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_247dc"]
+texture = ExtResource("4_kyao7")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7us7y"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_ihcr5")
+sources/1 = SubResource("TileSetAtlasSource_mayid")
+sources/2 = SubResource("TileSetAtlasSource_247dc")
 
 [node name="world" type="Node2D"]
-script = SubResource("GDScript_41mwx")
 
 [node name="Verde2" type="Sprite2D" parent="."]
 position = Vector2(-7.62939e-06, 0.500019)
-scale = Vector2(2.22566, 1.83152)
+scale = Vector2(3.971, 3.269)
 texture = ExtResource("1_onxdf")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_7us7y")
+format = 2
+layer_0/tile_data = PackedInt32Array(65528, 0, 3)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_jqlah")]
 position = Vector2(726, 6)
@@ -29,7 +141,7 @@ position = Vector2(726, 6)
 position = Vector2(329, 10)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("3_jqlah")]
-position = Vector2(-235, -5)
+position = Vector2(-216, -4.76837e-07)
 
 [node name="player" parent="." instance=ExtResource("1_rgky6")]
 z_index = 1
@@ -53,45 +165,17 @@ position = Vector2(-95, -126)
 [node name="coin5" parent="." instance=ExtResource("4_5htjf")]
 position = Vector2(409, -124)
 
-[node name="gem_collectable" parent="." instance=ExtResource("5_bdjtm")]
-position = Vector2(17, 122)
-
-[node name="gem_collectable5" parent="." instance=ExtResource("5_bdjtm")]
-position = Vector2(-65, 132)
-
-[node name="gem_collectable6" parent="." instance=ExtResource("5_bdjtm")]
-position = Vector2(-144, 123)
-
-[node name="gem_collectable2" parent="." instance=ExtResource("5_bdjtm")]
-position = Vector2(302, 114)
-
-[node name="gem_collectable3" parent="." instance=ExtResource("5_bdjtm")]
-position = Vector2(213, 109)
-
-[node name="gem_collectable4" parent="." instance=ExtResource("5_bdjtm")]
-position = Vector2(116, 119)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="chestInv_UI" parent="CanvasLayer" instance=ExtResource("6_3c4el")]
-anchors_preset = -1
-anchor_left = 0.921875
-anchor_top = 0.420525
-anchor_right = 1.22794
-anchor_bottom = 0.640525
-offset_left = -385.0
-offset_top = -40.5
-offset_right = -647.584
-offset_bottom = -118.06
-grow_horizontal = 0
-metadata/_edit_use_anchors_ = true
-
 [node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("7_uact4")]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 24.0
-offset_top = -44.0
-offset_right = 85.0
-offset_bottom = 2.0
-grow_vertical = 2
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
