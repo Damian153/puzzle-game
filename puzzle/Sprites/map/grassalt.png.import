@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dje823kcnshhf"
-path="res://.godot/imported/barrel.png-cafc42a0abeee03afa3b91b6b7ae5d1e.ctex"
+uid="uid://bqlvlx6h13k5b"
+path="res://.godot/imported/grassalt.png-0e441026ca0d436918ebfd76eb4de74b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/barrel.png"
-dest_files=["res://.godot/imported/barrel.png-cafc42a0abeee03afa3b91b6b7ae5d1e.ctex"]
+source_file="res://Sprites/map/grassalt.png"
+dest_files=["res://.godot/imported/grassalt.png-0e441026ca0d436918ebfd76eb4de74b.ctex"]
 
 [params]
 

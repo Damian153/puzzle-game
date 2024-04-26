@@ -8,6 +8,7 @@
 radius = 19.0263
 
 [node name="player" type="CharacterBody2D"]
+scale = Vector2(0.51, 0.51)
 script = ExtResource("1_11rt2")
 inv = ExtResource("2_klqxj")
 
@@ -20,6 +21,7 @@ scale = Vector2(1.51, 1.51)
 texture = ExtResource("1_k1rnw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.525, 1.525)
 limit_left = -1300
 limit_top = -800
 limit_right = 1300
