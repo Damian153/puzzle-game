@@ -1,9 +1,8 @@
-[gd_scene load_steps=84 format=3 uid="uid://ctj65w0ecf166"]
+[gd_scene load_steps=83 format=3 uid="uid://ctj65w0ecf166"]
 
 [ext_resource type="Texture2D" uid="uid://b46u5c2qf2o1y" path="res://Sprites/verde2.png" id="1_onxdf"]
 [ext_resource type="PackedScene" uid="uid://d25kdg30j3grm" path="res://Scene/player.tscn" id="1_rgky6"]
 [ext_resource type="Texture2D" uid="uid://cjawoatwuok74" path="res://Sprites/map/grass.png" id="2_fu0a7"]
-[ext_resource type="PackedScene" uid="uid://3ioeiacajlks" path="res://Scene/chest.tscn" id="3_jqlah"]
 [ext_resource type="Texture2D" uid="uid://qlxhief6wujd" path="res://Sprites/map/castlewalls.png" id="3_p1iwx"]
 [ext_resource type="PackedScene" uid="uid://cfuug6qn1lpol" path="res://Scene/Coin.tscn" id="4_5htjf"]
 [ext_resource type="Texture2D" uid="uid://dm6aerd54iiwo" path="res://Sprites/map/water.png" id="4_kyao7"]
@@ -4571,7 +4570,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-1507355, 5, 5, -1507354, 65541, 5, -1507353, 65541, 5, -1507352, 65541, 5, -1507351, 65541, 5, -1507350, 65541, 5, -1507349, 65541, 5, -1507348, 131077, 5, -1441819, 5, 6, -1441818, 65541, 6, -1441817, 65541, 6, -1441816, 65541, 6, -1441815, 65541, 6, -1441814, 65541, 6, -1441813, 65541, 6, -1441812, 131077, 6)
 
 [node name="staticbodychest" parent="." instance=ExtResource("39_3omc5")]
-position = Vector2(8, 0)
+position = Vector2(-952, -488)
 
 [node name="World_collision" type="StaticBody2D" parent="."]
 visible = false
@@ -4583,17 +4582,6 @@ polygon = PackedVector2Array(1320, -800, 1320, 800, -1312, 808, 1472, 880)
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="World_collision"]
 scale = Vector2(0.988, 0.988)
 polygon = PackedVector2Array(1320, -800, -1392, -880, -1312, 808, -1320, -792)
-
-[node name="StaticBody2D" parent="." instance=ExtResource("3_jqlah")]
-position = Vector2(726, 6)
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("3_jqlah")]
-position = Vector2(329, 10)
-
-[node name="StaticBody2D3" parent="." instance=ExtResource("3_jqlah")]
-position = Vector2(-616, -528)
-scale = Vector2(0.45, 0.45)
-constant_linear_velocity = Vector2(10, 0)
 
 [node name="player" parent="." instance=ExtResource("1_rgky6")]
 position = Vector2(-616, -464)

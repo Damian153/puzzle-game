@@ -47,46 +47,46 @@ size = Vector2(6.24999, 6.25)
 tile_set = SubResource("TileSet_1t1oh")
 rendering_quadrant_size = 32
 format = 2
-layer_0/tile_data = PackedInt32Array(-983070, 65536, 0)
+layer_0/tile_data = PackedInt32Array(-65536, 65536, 0)
 script = ExtResource("2_h0p16")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-944, -496)
+position = Vector2(16.0001, -16)
 shape = SubResource("CircleShape2D_nqser")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-944, -496)
+position = Vector2(16.0001, -16)
 scale = Vector2(5.12, 5.12)
 shape = SubResource("RectangleShape2D_c7xpl")
 debug_color = Color(0.952941, 0.0235294, 0.537255, 0.419608)
 
 [node name="locked" type="Label" parent="."]
-offset_left = -1000.0
-offset_top = -560.0
-offset_right = 1146.0
-offset_bottom = 191.0
+offset_left = -40.0
+offset_top = -80.0
+offset_right = 2106.0
+offset_bottom = 671.0
 scale = Vector2(0.05, 0.05)
 theme_override_colors/font_color = Color(0.854902, 0, 0, 1)
 theme_override_font_sizes/font_size = 551
 text = "LOCKED"
 
 [node name="unlocked" type="Label" parent="."]
-offset_left = -1016.0
-offset_top = -560.0
-offset_right = 2066.0
-offset_bottom = 178.0
+offset_left = -56.0
+offset_top = -80.0
+offset_right = 3026.0
+offset_bottom = 658.0
 scale = Vector2(0.05, 0.05)
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_font_sizes/font_size = 541
 text = "UNLOCKED!"
 
 [node name="impossible" type="Label" parent="."]
-offset_left = -1168.0
-offset_top = -560.0
-offset_right = 7830.0
-offset_bottom = 82.0
+offset_left = -208.0
+offset_top = -80.0
+offset_right = 8790.0
+offset_bottom = 562.0
 scale = Vector2(0.05, 0.05)
 theme_override_font_sizes/font_size = 471
 text = "You don't have a key to open this chest!"

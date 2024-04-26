@@ -60,6 +60,8 @@ func unlock():
 			unlocked.visible = false
 			var instance = gem_collectable.instantiate()
 			add_child(instance)
+			instance.position.x = tile_ch_pos[0].x + 16
+			instance.position.y = tile_ch_pos[0].y - 16
 #
 func _on_area_2d_body_entered(body):
 	if body.has_method("player"):
