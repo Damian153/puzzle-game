@@ -2,11 +2,9 @@ res://Scene/level1.tscn
 res://inv/Inv_UI.gd
 res://inv/playerinv.tres
 res://Scripts/coin.gd
-res://inv/chestinv.tres
 res://Scene/player.tscn
 res://Scene/chest.tscn
 res://inv/inv_ui.tscn
 res://inv/inv_ui_slot.tscn
 res://Scene/Coin.tscn
 res://Scene/gem_collectable.tscn
-res://Scripts/player.gd

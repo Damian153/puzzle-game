@@ -1,9 +1,9 @@
-[gd_scene load_steps=82 format=3 uid="uid://cmkcg6rf683mj"]
+[gd_scene load_steps=82 format=3 uid="uid://ctj65w0ecf166"]
 
 [ext_resource type="Texture2D" uid="uid://b46u5c2qf2o1y" path="res://Sprites/verde2.png" id="1_onxdf"]
 [ext_resource type="PackedScene" uid="uid://d25kdg30j3grm" path="res://Scene/player.tscn" id="1_rgky6"]
 [ext_resource type="Texture2D" uid="uid://cjawoatwuok74" path="res://Sprites/map/grass.png" id="2_fu0a7"]
-[ext_resource type="PackedScene" uid="uid://dn6y50gs5stob" path="res://Scene/chest.tscn" id="3_jqlah"]
+[ext_resource type="PackedScene" uid="uid://3ioeiacajlks" path="res://Scene/chest.tscn" id="3_jqlah"]
 [ext_resource type="Texture2D" uid="uid://qlxhief6wujd" path="res://Sprites/map/castlewalls.png" id="3_p1iwx"]
 [ext_resource type="PackedScene" uid="uid://cfuug6qn1lpol" path="res://Scene/Coin.tscn" id="4_5htjf"]
 [ext_resource type="Texture2D" uid="uid://dm6aerd54iiwo" path="res://Sprites/map/water.png" id="4_kyao7"]
@@ -4366,7 +4366,12 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-1310724, 26, 0, -1179652, 26, 1, -1245188, 26, 1, -1507331, 524314, 5, -1048578, 262170, 1, -1114114, 262170, 0, -1245186, 196634, 2, -1245184, 524314, 1, -1310720, 524314, 0, -1638400, 393242, 0, -1572864, 393242, 1, -1310728, 524314, 0, -1245192, 524314, 1, -1310726, 524314, 0, -1245190, 524314, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4"]
-polygon = PackedVector2Array(904, -600, 936, -608, 1224, -608, 1256, -600, 1256, -352, 1160, -352, 1160, -368, 1128, -368, 1128, -352, 1064, -352, 1064, -384, 904, -384)
+polygon = PackedVector2Array(904, -592, 936, -592, 1224, -592, 1256, -592, 1256, -352, 1160, -352, 1160, -384, 1128, -384, 1128, -352, 1064, -352, 1064, -384, 904, -384)
+
+[node name="player" parent="StaticBody2D4" instance=ExtResource("1_rgky6")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(808, -456)
 
 [node name="World_collision" type="StaticBody2D" parent="."]
 visible = false
@@ -4380,47 +4385,33 @@ scale = Vector2(0.988, 0.988)
 polygon = PackedVector2Array(1320, -800, -1392, -880, -1312, 808, -1320, -792)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_jqlah")]
-visible = false
 position = Vector2(726, 6)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("3_jqlah")]
-visible = false
 position = Vector2(329, 10)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("3_jqlah")]
-visible = false
 position = Vector2(-216, -4.76837e-07)
 
-[node name="player" parent="." instance=ExtResource("1_rgky6")]
-z_index = 1
-position = Vector2(-576, -464)
-
 [node name="Node2D" parent="." instance=ExtResource("4_5htjf")]
-visible = false
 position = Vector2(192, -120)
 
 [node name="coin" parent="." instance=ExtResource("4_5htjf")]
-visible = false
 position = Vector2(95, -119)
 
 [node name="coin2" parent="." instance=ExtResource("4_5htjf")]
-visible = false
 position = Vector2(4, -124)
 
 [node name="coin3" parent="." instance=ExtResource("4_5htjf")]
-visible = false
 position = Vector2(303, -124)
 
 [node name="coin4" parent="." instance=ExtResource("4_5htjf")]
-visible = false
 position = Vector2(-95, -126)
 
 [node name="coin5" parent="." instance=ExtResource("4_5htjf")]
-visible = false
 position = Vector2(409, -124)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("7_uact4")]
 anchors_preset = 7
