@@ -1,3 +1,4 @@
+AnimatedTexture
 Inv
 Resource
 InvItem
