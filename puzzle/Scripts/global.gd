@@ -6,7 +6,7 @@ var coin :String
 var remove = false
 var open = false
 var show_inv = false
-
+var plpos :Vector2
 var slots : Array
 
 func _process(delta):

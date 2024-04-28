@@ -1,7 +1,7 @@
 CollisionShape2D
-StaticBody2D
 Area2D
 TileMap
+StaticBody2D
 CanvasLayer
 TextureRect
 CollisionPolygon2D

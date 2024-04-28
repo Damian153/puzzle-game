@@ -8,6 +8,7 @@
 radius = 34.4991
 
 [node name="gem_collectable" type="StaticBody2D"]
+scale = Vector2(1.885, 1.885)
 script = ExtResource("1_ygvva")
 item = ExtResource("2_uyekc")
 
