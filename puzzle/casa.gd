@@ -1,10 +1,13 @@
 extends StaticBody2D
 
+@onready var open_text = $open_text
 
 var player_in_area = false
 var player = null
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _ready():
+	open_text.visible = false
+
 func _process(delta):
 	if player_in_area and Input.is_action_just_pressed("action"):
 		Global.plpos = player.position
@@ -16,8 +19,10 @@ func _on_area_2d_body_entered(body):
 	if body.has_method("player"):
 		player = body
 		player_in_area = true
+		open_text.visible = true
 
 
 func _on_area_2d_body_exited(body):
 	if body.has_method("player"):
 		player_in_area = false
+		open_text.visible = false

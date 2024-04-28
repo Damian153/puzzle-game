@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://dqbjti7do523i"]
+[gd_scene load_steps=80 format=3 uid="uid://dvhyl1tlgyy0x"]
 
 [ext_resource type="Script" path="res://casa.gd" id="1_d54n5"]
 [ext_resource type="Texture2D" uid="uid://cjawoatwuok74" path="res://Sprites/map/grass.png" id="1_reqga"]
@@ -4533,6 +4533,15 @@ polygon = PackedVector2Array(904, -592, 936, -592, 1224, -592, 1256, -592, 1256,
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(240, 11)
 shape = SubResource("RectangleShape2D_bjg7d")
+
+[node name="open_text" type="Label" parent="."]
+offset_left = 200.0
+offset_top = -64.0
+offset_right = 2018.0
+offset_bottom = 245.0
+scale = Vector2(0.05, 0.05)
+theme_override_font_sizes/font_size = 226
+text = "Press [E] to enter"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

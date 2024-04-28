@@ -5,9 +5,10 @@
 [ext_resource type="Resource" uid="uid://2vhvmw2jqlmk" path="res://inv/playerinv.tres" id="2_klqxj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rvhlo"]
-radius = 19.0263
+radius = 15.6863
 
 [node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
 scale = Vector2(0.51, 0.51)
 script = ExtResource("1_11rt2")
 inv = ExtResource("2_klqxj")
@@ -19,6 +20,7 @@ remote_path = NodePath("../Camera2D")
 texture_filter = 3
 scale = Vector2(1.51, 1.51)
 texture = ExtResource("1_k1rnw")
+offset = Vector2(0, -15)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.525, 1.525)
@@ -30,5 +32,4 @@ position_smoothing_enabled = true
 position_smoothing_speed = 6.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 15)
 shape = SubResource("CircleShape2D_rvhlo")
