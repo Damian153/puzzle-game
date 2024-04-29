@@ -3607,12 +3607,15 @@ texture_region_size = Vector2i(32, 32)
 5:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:5/0/physics_layer_0/angular_velocity = 0.0
 0:6/0 = 0
+0:6/0/y_sort_origin = 10
 0:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:6/0/physics_layer_0/angular_velocity = 0.0
 1:6/0 = 0
+1:6/0/y_sort_origin = 10
 1:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:6/0/physics_layer_0/angular_velocity = 0.0
 2:6/0 = 0
+2:6/0/y_sort_origin = 10
 2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:6/0/physics_layer_0/angular_velocity = 0.0
 3:6/0 = 0
@@ -4175,9 +4178,11 @@ visible = false
 polygon = PackedVector2Array(-1280, -824, -1144, -824, -1136, -832, -1128, -848, -1112, -848, -1096, -880, -1016, -880, -1000, -912, -992, -920, -856, -920, -848, -912, -840, -888, -840, -856, -664, -856, -648, -840, -648, -744, -608, -736, -648, -736, -864, -736, -848, -744, -848, -776, -872, -784, -920, -784, -936, -776, -936, -760, -936, -664, -864, -664, -864, -640, -1240, -640)
 
 [node name="bridge" type="TileMap" parent="."]
+y_sort_enabled = true
 position = Vector2(-24, 256)
 tile_set = SubResource("TileSet_7us7y")
 format = 2
+layer_0/y_sort_enabled = true
 layer_0/tile_data = PackedInt32Array(-1507355, 5, 5, -1507354, 65541, 5, -1507353, 65541, 5, -1507352, 65541, 5, -1507351, 65541, 5, -1507350, 65541, 5, -1507349, 65541, 5, -1507348, 131077, 5, -1441819, 5, 6, -1441818, 65541, 6, -1441817, 65541, 6, -1441816, 65541, 6, -1441815, 65541, 6, -1441814, 65541, 6, -1441813, 65541, 6, -1441812, 131077, 6)
 
 [node name="staticbodychest" parent="." instance=ExtResource("39_3omc5")]
@@ -4195,7 +4200,7 @@ scale = Vector2(0.988, 0.988)
 polygon = PackedVector2Array(1320, -800, -1392, -880, -1312, 808, -1320, -792)
 
 [node name="player" parent="." instance=ExtResource("1_rgky6")]
-position = Vector2(1076, -296)
+position = Vector2(821, -609)
 
 [node name="Node2D" parent="." instance=ExtResource("4_5htjf")]
 position = Vector2(192, -120)

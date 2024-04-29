@@ -7,7 +7,7 @@ var player = null
 func _process(delta):
 	if player_in_area and Input.is_action_just_pressed("action"):
 		get_tree().change_scene_to_file("res://Scene/level1.tscn")
-		player.position = Global.plpos
+		Global.exited = true
 
 func _on_area_2d_body_entered(body):
 	if body.has_method("player"):

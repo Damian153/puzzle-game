@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cp2hfkndww3jk"]
+[gd_scene load_steps=25 format=3 uid="uid://cp2hfkndww3jk"]
 
 [ext_resource type="Texture2D" uid="uid://bm6onn3drn4cn" path="res://Sprites/map/inside.png" id="1_7gg6o"]
 [ext_resource type="Texture2D" uid="uid://crfe3fvlj74gu" path="res://Sprites/map/kitchen.png" id="2_k0tsi"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://drh57l87nbubv" path="res://Sprites/map/house.png" id="4_lm83t"]
 [ext_resource type="Script" path="res://interior/pereteusa2.gd" id="5_qt741"]
 [ext_resource type="Script" path="res://interior/iesire.gd" id="6_yqyxl"]
+[ext_resource type="PackedScene" uid="uid://4l7eyvtgf47d" path="res://inv/inv_ui.tscn" id="8_6tr6b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y16d2"]
 texture = ExtResource("1_7gg6o")
@@ -1798,6 +1799,21 @@ shape = SubResource("RectangleShape2D_ak544")
 position = Vector2(16, 40)
 collision_layer = 3
 collision_mask = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("8_6tr6b")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [connection signal="body_entered" from="peretestg/Area2D" to="peretestg" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="peretestg/Area2D" to="peretestg" method="_on_area_2d_body_exited"]

@@ -8,7 +8,7 @@ var open = false
 var show_inv = false
 var plpos :Vector2
 var slots : Array
-
+var exited = false
 func _process(delta):
 	if Input.is_action_just_pressed("esc"):
 		get_tree().quit()

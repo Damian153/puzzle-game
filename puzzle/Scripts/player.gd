@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var playerr = $"."
 
 @export var speed = 200
 @export var inv: Inv
@@ -12,7 +13,11 @@ func _physics_process(delta):
 	else:
 		velocity.x = 0
 		velocity.y = 0
+		if Global.exited == true:
+			playerr.position = Global.plpos
+			Global.exited = false
 	move_and_slide()
+
 
 func player():
 	pass

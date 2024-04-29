@@ -11,3 +11,7 @@ res://Scene/gem_collectable.tscn
 res://Scene/chestbun.tscn
 res://Scene/casa.tscn
 res://interior/houseint.tscn
+res://casa.gd
+res://interior/pereteusa2.gd
+res://Scripts/global.gd
+res://Scripts/player.gd

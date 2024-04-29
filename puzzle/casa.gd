@@ -10,14 +10,12 @@ func _ready():
 
 func _process(delta):
 	if player_in_area and Input.is_action_just_pressed("action"):
-		Global.plpos = player.position
 		get_tree().change_scene_to_file("res://interior/houseint.tscn")
-
-
 
 func _on_area_2d_body_entered(body):
 	if body.has_method("player"):
 		player = body
+		Global.plpos = player.position
 		player_in_area = true
 		open_text.visible = true
 
