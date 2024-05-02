@@ -1,3 +1,9 @@
+HBoxContainer
+VBoxContainer
+Button
+PanelContainer
+Panel
+TextureButton
 Label
 CollisionShape2D
 Area2D
@@ -7,7 +13,3 @@ CanvasLayer
 TextureRect
 CollisionPolygon2D
 RigidBody2D
-Control
-Sprite2D
-Panel
-CenterContainer

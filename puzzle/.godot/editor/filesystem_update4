@@ -1,6 +1,7 @@
 res://Scene/level1.tscn
-res://inv/Inv_UI.gd
+res://inv/chestinv.tres
 res://inv/playerinv.tres
+res://inv/Inv_UI.gd
 res://Scripts/coin.gd
 res://Scene/player.tscn
 res://Scene/chest.tscn
@@ -8,10 +9,5 @@ res://inv/inv_ui.tscn
 res://inv/inv_ui_slot.tscn
 res://Scene/Coin.tscn
 res://Scene/gem_collectable.tscn
-res://Scene/chestbun.tscn
 res://Scene/casa.tscn
 res://interior/houseint.tscn
-res://casa.gd
-res://interior/pereteusa2.gd
-res://Scripts/global.gd
-res://Scripts/player.gd
