@@ -1,3 +1,6 @@
+AnimationTree
+AnimationPlayer
+AnimatedSprite2D
 HBoxContainer
 VBoxContainer
 Button
@@ -10,6 +13,3 @@ Area2D
 TileMap
 StaticBody2D
 CanvasLayer
-TextureRect
-CollisionPolygon2D
-RigidBody2D
