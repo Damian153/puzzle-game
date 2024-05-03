@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtrw6t2hod1wj"]
+
+[ext_resource type="Script" path="res://Scene/safe.gd" id="1_dfnyc"]
+[ext_resource type="Texture2D" uid="uid://ds6h68mgmd0rn" path="res://Sprites/Safe.png" id="1_qdee2"]
+[ext_resource type="PackedScene" uid="uid://jp3o8w543uty" path="res://Scene/seif.tscn" id="3_6b6dy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0a6qg"]
+size = Vector2(63, 56)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wnoca"]
+radius = 60.0333
+
+[node name="safe" type="StaticBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_dfnyc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qdee2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_0a6qg")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_wnoca")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="seif" parent="CanvasLayer" instance=ExtResource("3_6b6dy")]
+visible = false
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

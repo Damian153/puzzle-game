@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://d0ui076hquyku"]
+
+[ext_resource type="Texture2D" uid="uid://k6mgx8gmb2sc" path="res://Sprites/buton.png" id="1_75iyk"]
+[ext_resource type="Texture2D" uid="uid://hty30d01knbw" path="res://Sprites/butonapasat.png" id="1_upuw1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hdmhe"]
+texture = ExtResource("1_upuw1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_phsgy"]
+texture = ExtResource("1_75iyk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mm8s5"]
+texture = ExtResource("1_upuw1")
+modulate_color = Color(0.72549, 0.72549, 0.72549, 1)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_hdmhe")
+Button/styles/normal = SubResource("StyleBoxTexture_phsgy")
+Button/styles/pressed = SubResource("StyleBoxTexture_mm8s5")
